@@ -122,7 +122,7 @@ export default First;
 2. TouchableOpacity is a custom component which can detect any type of press on it
 3. 
   
-  ```
+```
   
 // Imports
 
@@ -161,7 +161,7 @@ const First = ({ navigation }) => {
 
 export default First;
 
-              ```
+```
               
 ## State Management
               
