@@ -115,6 +115,57 @@ const First = () => {
 export default First;
 
 ```
+  
+## Navigation
+  
+1. Button component is a simple component for showing button and detecting a press
+2. TouchableOpacity is a custom component which can detect any type of press on it
+3. 
+  
+  ```
+  
+// Imports
+
+const First = ({ navigation }) => {
+
+    const data = [1,2,3,4];
+
+
+  return (
+    <View style={styles.container}>
+
+            <Button
+                title="Go to Main"
+                onPress={() => navigation.navigate('Home')}
+            />
+
+        <FlatList
+        data={data}
+
+        renderItem = {({item,index})=>{
+
+            return(
+                <Text key={index} style={styles.textStyle}>{item}</Text>
+            )
+
+        }}
+        />
+
+      
+      
+    </View>
+  );
+}
+
+// Styles
+
+export default First;
+
+              ```
+              
+## State Management
+              
+              
 
 
 ## Official Docs
