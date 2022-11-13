@@ -165,8 +165,73 @@ export default First;
               
 ## State Management
               
+1. Using random color generator 
               
+```
 
+
+const Color = ({ navigation }) => {
+
+
+  return (
+    <View >
+
+        <View style={{width:100,height:100,backgroundColor:randomRGB()}}/>     
+      
+      
+    </View>
+  );
+};
+
+// Random color generator
+const randomRGB = () =>{
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+
+    return `rgb(${red},${green},${blue})`;
+}
+
+const styles = StyleSheet.create({});
+
+export default Color;
+
+```
+              
+2. Add usState for state management
+              
+```
+              
+ const Color = ({ navigation }) => {
+
+    const [color,setColor]  = useState([]);
+
+
+    const addColors =  () =>{
+
+        setColor(items => [...items,randomRGB()]);
+        console.log(color);
+
+    }
+
+
+  return (
+    <View >
+
+        <Button
+        title="add Colors"
+        onPress={addColors}
+        />
+
+        <View style={{width:100,height:100,backgroundColor:randomRGB()}}></View>     
+      
+      
+    </View>
+  );
+};             
+              
+```              
+              
 
 ## Official Docs
 1. React native docs : https://reactnative.dev/
