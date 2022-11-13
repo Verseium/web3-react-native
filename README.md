@@ -4,8 +4,8 @@
 
 ## Basics
 
-1. <View> is like <div> in comparison
-2. <Text> is like <p> in comparison
+1. View is like div in comparison
+2. Text is like p in comparison
 3. The elements should be wrapped inside a <View> tag.
 4. StyleSheet is used for styling components
 
